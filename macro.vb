@@ -3,11 +3,6 @@ Sub NextInvoice()
     Range("A14:F29").ClearContents
     Range("A6:A12").ClearContents
 End Sub
-Sub SaveBook()
-Dim sFile As String
-sFile = "MnZ-Invoice" & ".xlsm"
-    ActiveWorkbook.SaveAs Filename:="/Users/<username>/Documents/" & sFile, FileFormat:=52
-End Sub
 Sub SaveInvWithNewName()
     Dim NewFN As Variant
     ' Copy Invoice to a new workbook
