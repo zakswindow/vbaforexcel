@@ -6,18 +6,18 @@ End Sub
 Sub SaveBook()
 Dim sFile As String
 sFile = "MnZ-Invoice" & ".xlsm"
-ActiveWorkbook.SaveAs Filename:="/Users/zakhussain/Documents/" & sFile, FileFormat:=52
+    ActiveWorkbook.SaveAs Filename:="/Users/<username>/Documents/" & sFile, FileFormat:=52
 End Sub
 Sub SaveInvWithNewName()
     Dim NewFN As Variant
     ' Copy Invoice to a new workbook
     ActiveSheet.Copy
-    NewFN = "/Users/zakhussain/Documents/" & Range("A6").Value & "-" & Range("F4").Value & ".xlsx"
+    NewFN = "/Users/<username>/Documents/" & Range("A6").Value & "-" & Range("F4").Value & ".xlsx"
     ActiveWorkbook.SaveAs NewFN, FileFormat:=xlOpenXMLWorkbook
     'Save active workbook as PDF
     'Use this directory format for windows machine
     '"C:\Users\Documents\Invoice\"
-    NewFN1 = "/Users/zakhussain/Documents/" & Range("A6").Value & "-" & Range("F4").Value & ".pdf"
+    NewFN1 = "/Users/<username>/Documents/" & Range("A6").Value & "-" & Range("F4").Value & ".pdf"
     ActiveWorkbook.ExportAsFixedFormat Type:=xlTypePDF, _
     Filename:=NewFN1
     ActiveWorkbook.Close
